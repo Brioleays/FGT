@@ -1,32 +1,36 @@
-
-
-<section class="max-w-6xl mx-auto px-6 lg:px-16 py-10">
-    <div class="flex oveflow-y items-center justify-center gap-10 opacity-80">
-        <img src="./assets/icon1.png" class="h-20">
-        <img src="./assets/icon 2.png" class="h-20">
+<section class="max-w-6xl mx-auto px-6 lg:px-16 my-10 py-12 shadow-lg rounded-full">
+    <div class="flex flex-wrap items-center justify-center gap-10 opacity-80">
+        <img src="./assets/icon1.png" alt="Partner logo" class="h-16 md:h-20 object-contain">
+        <img src="./assets/icon 2.png" alt="Partner logo" class="h-16 md:h-20 object-contain">
     </div>
 </section>
 
+<section class="bg-accent/10 max-w-2xl mx-auto px-6 md:px-8 py-12 rounded-3xl text-center my-20">
 
-<section class="bg-accent/10 max-w-2xl mx-auto px-8 py-10 rounded-3xl text-center my-20">
+    <img src="./assets/mail.png" alt="Mail icon" class="mx-auto mb-4 w-10">
 
-    <img src="./assets/mail.png" class="mx-auto mb-4 w-10">
-
-    <h2 class="text-2xl font-bold text-gray-800">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
         Stay Up To Date
     </h2>
 
-    <p class="text-sm text-gray-600 mt-2">
+    <p class="text-sm md:text-base text-gray-600 mt-2">
         Subscribe to our newsletter to receive our weekly feed.
     </p>
 
-    <form class="flex gap-3 mt-6">
-        <input type="email" placeholder="Email"
-            class="flex-1 px-4 py-2 rounded-lg border shadow-sm focus:outline-none">
+    <form class="flex flex-col sm:flex-row gap-3 mt-6">
+        <input 
+            type="email" 
+            placeholder="Enter your email"
+            required
+            class="flex-1 px-4 py-3 rounded-lg border shadow-sm focus:ring-2 focus:ring-accent focus:outline-none"
+        >
 
-        <button class="bg-accent text-white px-6 rounded-lg flex justify-center items-center gap-2">
-            <p>Send</p>
-            <img src="./assets/send.png" alt="">
+        <button 
+            type="submit"
+            class="bg-accent hover:opacity-90 transition text-white px-6 py-3 rounded-lg flex justify-center items-center gap-2"
+        >
+            <span>Send</span>
+            <img src="./assets/send.png" alt="Send icon" class="w-4 h-4">
         </button>
     </form>
 
@@ -34,52 +38,63 @@
 
 
 <footer class="bg-gray-900 text-gray-400 pt-16 pb-8">
-    <div class="flex justify-between items-center max-w-6xl mx-auto pb-10" >
-        <img src="./assets/logo.png" class="w-25" alt="">
-        <div class="text-white flex items-center justify-center gap-4">
-            <p>Follow Us</p>
-            <img src="./assets/Symbol1.png" alt="">
-            <img src="./assets/Symbol2.png" alt="">
-            <img src="./assets/Symbol3.png" alt="">
-            <img src="./assets/Symbol4.png" alt="">
-        </div>
-    </div>
-    <hr class="max-w-5xl mx-auto">
-    <div class="max-w-6xl mr-10 px-8 lg:px-16 grid md:grid-cols-3 gap-10 md:py-10 justify-self-end">
 
-        <div>
-            <h4 class="text-white  mb-4">Home</h4>
-            <ul class="space-y-2 font-semibold text-sm">
-                <li>Hero Section</li>
-                <li>About Us</li>
-                <li>Benefits</li>
-                <li>FAQs</li>
-            </ul>
-        </div>
-        
-        <div>
-            <h4 class="text-white  mb-4">Services</h4>
-            <ul class="space-y-2 font-semibold text-sm">
-                <li>Title</li>
-                <li>Closing</li>
-            </ul>
-        </div>
-        <div>
-            <h4 class="text-white  mb-4">Contact Us</h4>
-            <ul class="space-y-2 font-semibold text-sm">
-                <li>Contact Form</li>
-                <li>Terms</li>
-                <li>Policy</li>
-                
-            </ul>
-        </div>
-        
+    <div class="max-w-6xl mx-auto px-6 lg:px-16">
 
-    </div>
+        <!-- Top Section -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-10">
 
-    <div class="border-t border-gray-700 mt-12 pt-6 text-center text-sm">
-        © 2026 FGT. All Rights Reserved.
+            <img src="./assets/logo.png" alt="FGT Logo" class="w-32">
+
+            <div class="text-white flex items-center gap-4">
+                <p class="font-semibold">Follow Us</p>
+                <img src="./assets/Symbol1.png" alt="Social icon" class="w-5 h-5">
+                <img src="./assets/Symbol2.png" alt="Social icon" class="w-5 h-5">
+                <img src="./assets/Symbol3.png" alt="Social icon" class="w-5 h-5">
+                <img src="./assets/Symbol4.png" alt="Social icon" class="w-5 h-5">
+            </div>
+
+        </div>
+
+        <hr class="border-gray-700">
+
+        <!-- Links Section -->
+        <div class="grid grid-cols-1 justify-items-start md:grid-cols-3 gap-10 py-12 md:justify-items-end">
+
+            <div>
+                <h4 class="text-white mb-4 font-semibold">Home</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Hero Section</a></li>
+                    <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition">Benefits</a></li>
+                    <li><a href="#" class="hover:text-white transition">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white mb-4 font-semibold">Services</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Title</a></li>
+                    <li><a href="#" class="hover:text-white transition">Closing</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white mb-4 font-semibold">Contact Us</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Contact Form</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms</a></li>
+                    <li><a href="#" class="hover:text-white transition">Policy</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-700 pt-6 text-center text-sm">
+            © 2026 FGT. All Rights Reserved.
+        </div>
+
     </div>
 
 </footer>
-

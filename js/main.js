@@ -53,6 +53,16 @@ function loadComponentScript(scriptPath, id) {
     .catch(() => {});
 }
 
+ const toggleBtn = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("hidden");
+
+    const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+    toggleBtn.setAttribute("aria-expanded", !expanded);
+  });
+
 // Helper: capitalize first letter
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);

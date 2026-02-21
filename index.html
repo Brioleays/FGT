@@ -29,7 +29,7 @@
 
                 },
                 backgroundImage:{
-                    // hero: "url('./assets/hero.png')",
+                    hero: "url('./assets/hero.jpg')",
                 }
                 }
             }
@@ -43,41 +43,249 @@
             <div id="navbar"></div>
 
             <main class="min-h-screen">
-                <h1 class="text-3xl  font-bold p-6">Home</h1>
+                
             <!-- Your page content goes here -->
                 <!--=============================================================================
                                                     HERO
                     ============================================================================= -->
-                <!-- <div class="relative bg-hero bg-contain bg-no-repeat bg-center h-[129vh] justify-center text-center my-10">
-                    <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white  max-w-2xl mx-auto">
-                        <h1 class="font-bold text-5xl">Your Trusted Partner in Estate & Elder Law Planning</h1>
-                        <p class="text-sm my-6">We help chart a course that protects your family today and preserves your legacy tomorrow.</p>
-                        <div class="flex items-center gap-4 ">
-                            <button class="bg-white text-accent px-4 py-2 rounded-2xl">Get Started</button>
-                            <button class="border border-white text-white px-4 py-2 rounded-2xl">Attend a Seminar</button>
+                <div class="relative bg-hero bg-cover bg-center min-h-screen flex items-center">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black/60"></div>
+
+                    <div class="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+                        
+                        <!-- Text Content -->
+                        <div class="text-white">
+                            <h1 class="font-bold text-4xl md:text-5xl leading-tight">
+                                Fast, Secure Title and Escrow
+                            </h1>
+
+                            <p class="text-base md:text-lg my-6 text-gray-200">Built for Agents who need reliable closing.
+                            </p>
+
+                            <button class="bg-accent hover:opacity-90 transition px-6 py-3 rounded-2xl">
+                                Open a New Order
+                            </button>
                         </div>
+
+                        <!-- Hero Image -->
+                        <div class="hidden md:block">
+                            <img src="./assets/hero2.png" class="w-full max-w-md mx-auto" alt="Legal planning illustration">
+                        </div>
+
                     </div>
-                </div> -->
+                </div>
                 <!--=============================================================================
-                                                    Attorney introduction
+                                                    About Us
                     ============================================================================= -->
-                <!-- <div class="grid grid-cols-2 my-10 items-center max-w-6xl mx-auto">
-                    <div>
-                        <h2 class="text-accent text-2xl font-bold mt-4">
-                            An Attourney who cares
+                <section class="max-w-6xl mx-auto px-6 lg:px-16 my-16">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white shadow-lg rounded-2xl p-8 md:p-12">
+                        
+                        <!-- Text Content -->
+                        <div>
+                        
+                        <span class="text-accent text-sm font-semibold tracking-wide border-l-4 border-accent pl-3 uppercase">
+                            OUR VALUES
+                        </span>
+
+                        <h2 class="text-2xl md:text-3xl font-bold mt-4 text-gray-900">
+                            About Us
                         </h2>
-                        <p class="my-10">
-                            Adipiscing nam neque hendrerit nec pellentesque diam a. Varius quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat pellentesque.
-                            Potenti porta mauris nec vulputate.
+
+                        <p class="mt-6 text-gray-600 leading-relaxed">
+                            At Florida Guardian Title and Escrow, our mission is to set the standard 
+                            for excellence in land title and real estate settlement services across 
+                            the state of Florida.
                         </p>
-                        <div class="flex items-center gap-4 ">
-                            <button class="bg-accent text-white px-4 py-2 rounded-2xl">Get Started</button>
-                            <button class="border border-accent text-accent px-4 py-2 rounded-2xl">Attend a Seminar</button>
+
+                        <button class="mt-8 bg-accent text-white hover:opacity-90 transition px-6 py-3 rounded-2xl">
+                            Learn More
+                        </button>
+
                         </div>
+
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                        <img 
+                            src="./assets/aboutus.png" 
+                            class="w-full max-w-md rounded-xl object-contain" 
+                            alt="About Florida Guardian Title"
+                        >
+                        </div>
+
                     </div>
-                    <div><img src="./assets/attourney.png" class="w-30" alt=""></div>
-                </div> -->
+
+                    </section>
+                
+                <section class="max-w-6xl mx-auto px-6 lg:px-16 my-16">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white shadow-lg rounded-2xl p-8 md:p-12">
+                        
+                        <!-- Text Content -->
+                        <div>
+                        
+                        <span class="text-accent text-sm font-semibold tracking-wide border-l-4 border-accent pl-3 uppercase">
+                            OUR OFFER
+                        </span>
+
+                        <h2 class="text-2xl md:text-3xl font-bold mt-4 text-gray-900">
+                            Services
+                        </h2>
+                         <h3 class="text-xl md:text-2xl font-semibold mt-4 text-accent">
+                            (Title + Escrow/Closing)
+                        </h3>
+                        <p class="mt-6 text-gray-600 leading-relaxed">
+                            At Florida Guardian Title and Escrow, our mission is to set the standard 
+                            for excellence in land title and real estate settlement services across 
+                            the state of Florida.
+                        </p>
+
+                        <button class="mt-8 bg-accent text-white hover:opacity-90 transition px-6 py-3 rounded-2xl">
+                            Learn More
+                        </button>
+
+                        </div>
+
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                        <img 
+                            src="./assets/services.png" 
+                            class="w-full max-w-md rounded-xl object-contain" 
+                            alt="Services Florida Guardian Title"
+                        >
+                        </div>
+
+                    </div>
+
+                    </section>
+                    <section class="max-w-6xl mx-auto px-6 lg:px-16 my-16">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white shadow-lg rounded-2xl p-8 md:p-12">
+                        
+                        <!-- Text Content -->
+                        <div>
+                        
+                        <span class="text-accent text-sm font-semibold tracking-wide border-l-4 border-accent pl-3 uppercase">
+                            BENEFIT WE GIVE
+                        </span>
+
+                        <h2 class="text-2xl md:text-3xl font-bold mt-4 text-gray-900">
+                            Realtor Benefits
+                        </h2>
+
+                        <p class="mt-6 text-gray-600 leading-relaxed">
+                            At Florida Guardian Title and Escrow, our mission is to set the standard 
+                            for excellence in land title and real estate settlement services across 
+                            the state of Florida.
+                        </p>
+
+                        <button class="mt-8 bg-accent text-white hover:opacity-90 transition px-6 py-3 rounded-2xl">
+                            Learn More
+                        </button>
+
+                        </div>
+
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                        <img 
+                            src="./assets/realtorbenefit.png" 
+                            class="w-full max-w-md rounded-xl object-contain" 
+                            alt="Benefit Florida Guardian Title"
+                        >
+                        </div>
+
+                    </div>
+
+                    </section>
+                    <section class="bg-white py-20 ">
+                        <div class="max-w-6xl mx-auto px-6">
+
+                            <!-- Rounded Container -->
+                            <div class="bg-white rounded-3xl p-10 md:p-14 shadow-lg">
+
+                            <!-- Header -->
+                            <div class="mb-12">
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 flex items-center gap-3">
+                                <span class="w-1 h-6 bg-accent inline-block rounded"></span>
+                                Frequently Asked Questions
+                                </h2>
+                                <p class="text-gray-600 mt-3 text-sm md:text-base max-w-2xl">
+                                Find answers to common questions about FGTITLE services. We're here to provide clarity and assist you every step of the way.
+                                </p>
+                            </div>
+
+                            <!-- Cards -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                                <!-- Card 1 -->
+                                <div class="bg-gray-900 text-white rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="font-semibold text-lg mb-4">
+                                    How do I search on FGTITLE?
+                                </h3>
+                                <p class="text-gray-400 text-sm mb-6">
+                                    Learn how to use our search feature to find properties that match your criteria.
+                                </p>
+                                <button class="bg-blue-700 hover:bg-blue-600 text-white text-sm px-4 py-2 rounded-md transition">
+                                    Read More
+                                </button>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="bg-gray-900 text-white rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="font-semibold text-lg mb-4">
+                                    What documents do I need to sell my property on FGTITLE?
+                                </h3>
+                                <p class="text-gray-400 text-sm mb-6">
+                                    Find out about the necessary documentation for listing your property with us.
+                                </p>
+                                <button class="bg-blue-700 hover:bg-blue-600 text-white text-sm px-4 py-2 rounded-md transition">
+                                    Read More
+                                </button>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="bg-gray-900 text-white rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300">
+                                <h3 class="font-semibold text-lg mb-4">
+                                    How can I contact an FGTITLE agent?
+                                </h3>
+                                <p class="text-gray-400 text-sm mb-6">
+                                    Discover the different ways you can get in touch with our experienced agents.
+                                </p>
+                                <button class="bg-blue-700 hover:bg-blue-600 text-white text-sm px-4 py-2 rounded-md transition">
+                                    Read More
+                                </button>
+                                </div>
+
+                            </div>
+                            <hr class="my-10 px-6 h-4"/>
+                            <!-- Bottom Navigation -->
+                            <div class="flex justify-between items-center mt-10">
+
+                                <span class="text-sm font-bold text-gray-600">
+                                01 of 10
+                                </span>
+
+                                <div class="flex items-center font-bold gap-3">
+
+                                <!-- Prev -->
+                                <button class="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center text-gray-600 hover:bg-accent hover:text-white transition">
+                                    ←
+                                </button>
+
+                                <!-- Next -->
+                                <button class="w-10 h-10 rounded-full border border-gray-400 text-gray-600 flex items-center justify-center hover:bg-accent hover:text-white transition">
+                                    →
+                                </button>
+
+                                </div>
+
+                            </div>
+
+                            </div>
+                        </div>
+                        </section>
                  
             </main>
 
@@ -86,6 +294,7 @@
 
 
         <script src="./js/main.js"></script>
+        <script src="./js/navbar.js"></script>
     </body>
 
  </html>

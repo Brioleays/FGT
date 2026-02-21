@@ -27,13 +27,16 @@
                 fontFamily: {
                     customFont: ['open sans', 'sans-serif'],
                     
-                }
+                },
+                 borderRadius: {
+                    'custom': '50px', // Replace '10px' with your desired value
+                    },
                 }
             }
             }
         </script>
 
-        <title>FGT | CONTACT US</title>
+        <title>FGT | REALTOR BENEFITS</title>
     </head>
     <body class="font-customFont">
         
@@ -41,7 +44,21 @@
 
             <main class="min-h-screen">
             <!-- Your page content goes here -->
-             <h1 class="text-3xl  font-bold p-6">Contact Us</h1>
+             <section class="relative py-6 md:py-12  px-6 lg:px-16 rounded-b-custom shadow-lg ">
+                    <div class="absolute inset-0 bg-accent/5 rounded-b-custom"></div>
+                    <div class="relative z-10">
+                        <p class="relative z-10 text-accent text-sm text-center font-semibold  uppercase">
+                                contact us
+                        </p>
+
+                        <h2 class="text-3xl md:text-6xl font-semibold mt-4 text-center text-gray-900">
+                            Let's Get in Touch 
+                        </h2>
+                        <p class="text-grey-900 text-md text-center mt-4 max-w-2xl mx-auto">
+                            The FGTITLE team is here to answer questions, please use the contact form below to reach us. 
+                        </p>
+                    </div>
+                </section>
 
             </main>
 

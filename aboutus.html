@@ -27,7 +27,10 @@
                 fontFamily: {
                     customFont: ['open sans', 'sans-serif'],
                     
-                }
+                },
+                borderRadius: {
+                    'custom': '50px', // Replace '10px' with your desired value
+                    },
                 }
             }
             }
@@ -41,7 +44,70 @@
 
             <main class="min-h-screen">
             <!-- Your page content goes here -->
-             <h1 class="text-3xl  font-bold p-6">About Us</h1>
+             
+                <section class="relative py-6 md:py-12  px-6 lg:px-16 rounded-b-custom shadow-lg ">
+                    <div class="absolute inset-0 bg-accent/5 rounded-b-custom"></div>
+                    <p class="relative z-10 text-accent text-sm text-center font-semibold  uppercase">
+                            PROTECTING WHAT MATTERS
+                    </p>
+
+                        <h2 class="text-3xl md:text-6xl font-semibold mt-4 text-center text-gray-900">
+                            About Us
+                        </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start bg-white mt-6 p-8 md:p-12">
+                        
+                        <!-- Text Content -->
+                        <div>                     
+                        
+                        <p class="mt-6 text-gray-600 leading-relaxed">
+                            At Florida Guardian Title and Escrow, our mission is to 
+                            set the standard for excellence in land title and real 
+                            estate settlement services across the state of Florida.
+
+                        </p>
+                         <p class="mt-6 text-gray-600 leading-relaxed">
+                            
+                            We are committed to delivering a seamless and 
+                            professional experience, grounded in personalized 
+                            service and a genuine dedication to our clients.
+
+                        </p>
+                         <p class="mt-6 text-gray-600 leading-relaxed">
+                            
+
+                            Driven by ongoing investment in innovation, collaborative 
+                            teamwork, and clear communication, we offer a level of 
+                            service that is both efficient and unmatched. 
+                            Our foundation is built on reliability, integrity, and a deep 
+                            respect for the values that matter most—trust, 
+                            transparency, and professionalism.
+
+                        </p>
+                         <p class="mt-6 text-gray-600 leading-relaxed">
+                           
+                            We invite you to explore the resources and tools available
+                            on our website and look forward to being your trusted partner in every step of the closing process.
+                        </p>
+
+                        <button class="mt-8 bg-accent text-white hover:opacity-90 transition px-6 py-3 rounded-2xl">
+                            Open Order Now
+                        </button>
+
+                        </div>
+
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                        <img 
+                            src="./assets/services.png" 
+                            class="w-full max-w-md rounded-xl object-contain" 
+                            alt="Services Florida Guardian Title"
+                        >
+                        </div>
+
+                    </div>
+
+
+                </section>
 
             </main>
 

@@ -27,7 +27,10 @@
                 fontFamily: {
                     customFont: ['open sans', 'sans-serif'],
                     
-                }
+                },
+                 borderRadius: {
+                    'custom': '50px', // Replace '10px' with your desired value
+                    },
                 }
             }
             }
@@ -41,7 +44,53 @@
 
             <main class="min-h-screen">
             <!-- Your page content goes here -->
-             <h1 class="text-3xl  font-bold p-6">REALTOR BENEFITS</h1>
+             <section class="relative py-6 md:py-12  px-6 lg:px-16 rounded-b-custom shadow-lg ">
+                    <div class="absolute inset-0 bg-accent/5 rounded-b-custom"></div>
+                    <p class="relative z-10 text-accent text-sm text-center font-semibold  uppercase">
+                            CLOSING WITH CONFIDENCE
+                    </p>
+
+                        <h2 class="text-3xl md:text-6xl font-semibold mt-4 text-center text-gray-900">
+                            Realtors Benefits 
+                        </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white mt-6 p-8 md:p-12">
+                        
+                        <!-- Text Content -->
+                        <div>                     
+                        
+                        <h4 class="mt-6 text-gray-600 text-2xl font-semibold leading-relaxed">
+                            Benefit with Florida Guardian Title & Escrow
+
+                        </h4>
+                         
+                         <ul class="mr-6 text-gray-600 leading-relaxed list-disc list-inside">
+                            <li>Full service on every transaction</li>
+                            <li>Timely and accurate title commitment</li>
+                            <li>Superior communication</li>
+                            <li>Knowledgeable and professional staff</li>
+                            <li>Contract upload capability or drop off</li>
+                         </ul>
+                         
+
+                        <button class="mt-8 bg-accent text-white hover:opacity-90 transition px-6 py-3 rounded-2xl">
+                            Open Order Now
+                        </button>
+
+                        </div>
+
+                        <!-- Image -->
+                        <div class="flex justify-center">
+                        <img 
+                            src="./assets/realtorbenefit.png" 
+                            class="w-full max-w-md rounded-xl object-contain" 
+                            alt="Services Florida Guardian Title"
+                        >
+                        </div>
+
+                    </div>
+
+
+                </section>
 
             </main>
 
