@@ -9,6 +9,7 @@ function loadAllComponents() {
   const components = {
     navbar: "./partials/navbar.html",
     footer: "./partials/footer.html",
+    footerTwo: "./partials/footertwo.html",
     // sidebar: "partials/sidebar.html",
   };
 
@@ -53,18 +54,18 @@ function loadComponentScript(scriptPath, id) {
     .catch(() => {});
 }
 
- const toggleBtn = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-
-  toggleBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("hidden");
-
-    const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
-    toggleBtn.setAttribute("aria-expanded", !expanded);
-  });
-
 // Helper: capitalize first letter
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// ✅ Dynamic Hamburger Menu Logic (works for all loaded navbars)
+document.addEventListener("click", (e) => {
+  // Check if the click is on a hamburger button
+  if (e.target.closest("#menu-toggle")) {
+    const navLinks = document.querySelector("#nav-links");
+    if (navLinks) {
+      navLinks.classList.toggle("hidden");
+    }
+  }
+});
