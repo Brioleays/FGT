@@ -10,7 +10,8 @@ function loadAllComponents() {
     navbar: "./partials/navbar.html",
     footer: "./partials/footer.html",
     footerTwo: "./partials/footertwo.html",
-    sidebar: "partials/sidebar.html",
+    sidebar: "./partials/sidebar.html",
+    sidebarHead: "./partials/sidebarhead.html"
   };
 
   Object.entries(components).forEach(([id, file]) => loadComponent(id, file));

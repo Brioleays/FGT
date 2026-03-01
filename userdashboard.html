@@ -36,23 +36,122 @@
             }
         </script>
 
-        <title>FGT | LOGIN</title>
+        <title>FGT | USER DASHBOARD</title>
     </head>
-    <body class="font-customFont">
-        
-            <div id="sidebar" class="z-10"></div>
+    <body class="font-customFont bg-gray-100">
 
-            <main class="min-h-screen z-0">
-            <!-- Your page content goes here -->
-               
-            </main>
+    <!-- HEADER -->
+    <div id="sidebarHead"></div>
 
-           
+    <!-- PAGE LAYOUT -->
+    <div class="flex pt-20 min-h-screen">
 
+        <!-- SIDEBAR -->
+        <div id="sidebar" class="md:w-64"></div>
 
-        
-        <script src="./js/main.js"></script>
-    </body>
+        <!-- CONTENT -->
+        <main class="flex-1 p-8">
+            <!-- Page specific content goes here -->
+            <div class="ml-64 pt-16 p-8 bg-gray-50 min-h-screen">
+
+                <!-- Page Title -->
+                <div class="flex items-center justify-between mb-6">
+                    <h1 class="text-2xl font-semibold">Orders</h1>
+
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">
+                        + Add Order
+                    </button>
+                </div>
+
+                <!-- Filters Row -->
+                <div class="bg-white p-4 rounded-lg shadow-sm border mb-6 flex items-center gap-4 flex-wrap">
+
+                    <select class="border rounded-lg px-3 py-2 text-sm">
+                        <option>Filter</option>
+                    </select>
+
+                    <input type="text"
+                        placeholder="Search by Property Address, File No..."
+                        class="flex-1 border rounded-lg px-4 py-2 text-sm">
+
+                </div>
+
+                <!-- Table -->
+                <div class="bg-white rounded-lg shadow-sm border overflow-hidden">
+
+                    <table class="w-full text-sm text-left">
+
+                        <thead class="bg-gray-50 border-b text-gray-500">
+                            <tr>
+                                <th class="px-6 py-3">Property Address</th>
+                                <th class="px-6 py-3">File ID</th>
+                                <th class="px-6 py-3">Parties</th>
+                                <th class="px-6 py-3">Closing Date</th>
+                                <th class="px-6 py-3">Order Status</th>
+                                <th class="px-6 py-3">Timestamp</th>
+                                <th class="px-6 py-3">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="divide-y">
+
+                            <!-- Row -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">123 1st Avenue</td>
+                                <td class="px-6 py-4">0123</td>
+                                <td class="px-6 py-4">Jan Doe & Co.</td>
+                                <td class="px-6 py-4">May 5, 2025</td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs">
+                                        New Order
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">9:12pm</td>
+                                <td class="px-6 py-4">•••</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">15 Hillview</td>
+                                <td class="px-6 py-4">0124</td>
+                                <td class="px-6 py-4">John D.</td>
+                                <td class="px-6 py-4">May 6, 2025</td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">7:12pm</td>
+                                <td class="px-6 py-4">•••</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">98 Lake Road</td>
+                                <td class="px-6 py-4">0125</td>
+                                <td class="px-6 py-4">Alice & Co.</td>
+                                <td class="px-6 py-4">May 7, 2025</td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-xs">
+                                        In Progress
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">6:30pm</td>
+                                <td class="px-6 py-4">•••</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
     
  </html> 
 

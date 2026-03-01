@@ -1,0 +1,50 @@
+<!-- ================= HEADER (FULL WIDTH) ================= -->
+
+
+  <header class="fixed top-0 left-0 w-full h-16 bg-white border-b flex items-center justify-between px-6 z-50">
+
+    <!-- LEFT: Logo + Search -->
+    <div class="flex items-center gap-6 w-1/2">
+
+        <!-- LOGO PLACEHOLDER -->
+        <div class="w-8 h-8 bg-gray-300 rounded"></div>
+
+        <!-- SEARCH -->
+        <div class="relative w-full max-w-md">
+            <input type="text"
+                   placeholder="Search..."
+                   class="w-full pl-10 pr-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <span class="absolute left-3 top-2.5 text-gray-400 text-sm">
+                🔍
+            </span>
+        </div>
+    </div>
+
+    <!-- RIGHT: Icons + User -->
+    <div class="flex items-center gap-6">
+         <!-- Mobile Toggle -->
+      <button id="openSidebar" class="md:hidden text-2xl">
+        ☰
+      </button>
+
+        <!-- Notification -->
+        <div class="relative cursor-pointer">
+            🔔
+            <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
+                3
+            </span>
+        </div>
+
+        <!-- USER -->
+        <div class="flex items-center gap-2 cursor-pointer">
+            <!-- User -->
+            <img src="./assets/profile.png"
+           class="w-10 h-10 rounded-full object-cover"
+           alt="User">
+            <span class="text-sm font-medium">Ben Doe</span>
+        </div>
+
+    </div>
+
+</header>
