@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+                
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script> 
+
+        <!-- Tailwind Config -->
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    primary: '',
+                    secondary: '',
+                    neutralBg: '',
+                    neutralText: '',
+                    accent: '#000080',
+                    
+                },
+                fontFamily: {
+                    customFont: ['open sans', 'sans-serif'],
+                    
+                },
+                borderRadius: {
+                    custom: '50px',
+                }
+                }
+            }
+            }
+        </script>
+
+        <title>FGT | DOCUMENTS UPLOAD</title>
+    </head>
+    <body class="font-customFont bg-gray-100">
+
+    <!-- HEADER -->
+    <div id="sidebarHead"></div>
+
+    <!-- PAGE LAYOUT -->
+    <div class="flex pt-16 min-h-screen">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar" class="md:w-64"></div>
+
+        <!-- CONTENT -->
+        <main class="flex-1 p-8 pt-0 bg-white">
+            <!-- Page Title -->
+                
+            <div class="bg-gray-100 min-h-screen">
+                <div class="p-8 max-w-3xl">
+
+                    <!-- Page Title -->
+                    <h1 class="text-2xl font-semibold text-accent mb-8">
+                        Documents
+                    </h1>
+
+                    <!-- Form -->
+                    <form class="space-y-6">
+
+                        <!-- Title -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-600 mb-2">
+                                Title
+                            </label>
+                            <input type="text"
+                                placeholder="Document title"
+                                class="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+
+                        <!-- Description -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-600 mb-2">
+                                Description
+                            </label>
+                            <textarea
+                                placeholder="Document description"
+                                rows="3"
+                                class="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                        </div>
+
+                        <!-- Upload Area -->
+                        <div class="border-2 border-dashed border-gray-300 rounded-xl p-12 bg-white text-center hover:border-blue-600 transition">
+
+                            <!-- Upload Icon Placeholder -->
+                            <div class="w-14 h-14 mx-auto mb-4 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 text-xl">
+                                ↑
+                            </div>
+
+                            <p class="text-sm font-medium text-gray-700">
+                                Upload media (5MB Max)
+                            </p>
+
+                            <p class="text-xs text-gray-400 mt-1">
+                                Drag and Drop media
+                            </p>
+
+                            <!-- Hidden File Input -->
+                            <input type="file" class="hidden">
+                        </div>
+
+                        <!-- Button -->
+                        <div class="pt-6 flex justify-center">
+                            <button type="submit"
+                                    class="bg-[#0B1E8A] text-white px-16 py-3 rounded-full text-sm font-medium hover:opacity-90 transition">
+                                Save and Upload
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+    
+ </html> 
+

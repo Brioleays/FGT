@@ -36,7 +36,7 @@
             }
         </script>
 
-        <title>FGT | USER DASHBOARD</title>
+        <title>FGT | USER ORDER</title>
     </head>
     <body class="font-customFont bg-gray-100">
 
@@ -44,18 +44,21 @@
     <div id="sidebarHead"></div>
 
     <!-- PAGE LAYOUT -->
-    <div class="flex pt-20 min-h-screen">
+
+    <div class="flex pt-i6 min-h-screen">
 
         <!-- SIDEBAR -->
         <div id="sidebar" class="md:w-64"></div>
 
         <!-- CONTENT -->
-        <main class="flex-1 p-8 pt-0 bg-white">
+
+        <main class="flex-1 pt-16 bg-white">
             <!-- Page Title -->
-                
-                    <h1 class="p-8 text-2xl font-semibold text-accent">Orders</h1>
+            <div class="p-8">
+                    <h1 class=" text-2xl font-semibold text-accent">Orders</h1>
             <!-- Page specific content goes here -->
-            <div class="p-8 bg-gray-50 min-h-screen">
+            <div class=" bg-gray-50 min-h-screen">
+
 
 
                 <!-- Filters Row -->
@@ -81,6 +84,9 @@
 
                         <thead class="bg-gray-50 border-b text-gray-500">
                             <tr>
+
+                                <th class="px-6 py-3"><input type="checkbox" class="w-4 h-4 accent-blue-600"/></th>
+
                                 <th class="px-6 py-3">Property Address</th>
                                 <th class="px-6 py-3">File ID</th>
                                 <th class="px-6 py-3">Parties</th>
@@ -94,28 +100,38 @@
                         <tbody class="divide-y">
 
                             <!-- Row -->
-                            <tr class="hover:bg-gray-50">
+
+                             
+                            <tr class="hover:bg-gray-50 cursor-pointer" onclick="window.location.href='./orderdetails.html'">
+                                <td class="px-6 py-4"><input type="checkbox" class="w-4 h-4 accent-blue-600"/></td>
                                 <td class="px-6 py-4">123 1st Avenue</td>
                                 <td class="px-6 py-4">0123</td>
                                 <td class="px-6 py-4">Jan Doe & Co.</td>
                                 <td class="px-6 py-4">May 5, 2025</td>
                                 <td class="px-6 py-4">
-                                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs">
-                                        New Order
+
+                                    <span class="text-white bg-[#3A71C1] px-3 py-1 rounded-xl text-xs">
+                                        Payoff
+
                                     </span>
                                 </td>
                                 <td class="px-6 py-4">9:12pm</td>
                                 <td class="px-6 py-4">•••</td>
                             </tr>
 
+                            </a>
+
                             <tr class="hover:bg-gray-50">
+                                
+                                <td class="px-6 py-4"><input type="checkbox" class="w-4 h-4 accent-blue-600"/></td>
                                 <td class="px-6 py-4">15 Hillview</td>
                                 <td class="px-6 py-4">0124</td>
                                 <td class="px-6 py-4">John D.</td>
                                 <td class="px-6 py-4">May 6, 2025</td>
                                 <td class="px-6 py-4">
-                                    <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs">
-                                        Completed
+
+                                    <span class="text-white bg-[#3A71C1] px-3 py-1 rounded-xl text-xs">
+                                        Title ordered
                                     </span>
                                 </td>
                                 <td class="px-6 py-4">7:12pm</td>
@@ -123,13 +139,19 @@
                             </tr>
 
                             <tr class="hover:bg-gray-50">
+
+                                
+                                <td class="px-6 py-4"><input type="checkbox" class="w-4 h-4 accent-blue-600"/></td>
+
                                 <td class="px-6 py-4">98 Lake Road</td>
                                 <td class="px-6 py-4">0125</td>
                                 <td class="px-6 py-4">Alice & Co.</td>
                                 <td class="px-6 py-4">May 7, 2025</td>
                                 <td class="px-6 py-4">
-                                    <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-xs">
-                                        In Progress
+
+                                    <span class="text-white bg-[#3A71C1] px-3 py-1 rounded-xl text-xs">
+                                        opened
+
                                     </span>
                                 </td>
                                 <td class="px-6 py-4">6:30pm</td>

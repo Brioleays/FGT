@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+                
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script> 
+
+        <!-- Tailwind Config -->
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    primary: '',
+                    secondary: '',
+                    neutralBg: '',
+                    neutralText: '',
+                    accent: '#000080',
+                    
+                },
+                fontFamily: {
+                    customFont: ['open sans', 'sans-serif'],
+                    
+                },
+                borderRadius: {
+                    custom: '50px',
+                }
+                }
+            }
+            }
+        </script>
+
+        <title>FGT | MESAGE</title>
+    </head>
+    <body class="font-customFont bg-gray-100">
+
+    <!-- HEADER -->
+    <div id="sidebarHead"></div>
+
+    <!-- PAGE LAYOUT -->
+    <div class="flex pt-16 min-h-screen">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar" class="md:w-64"></div>
+
+        <!-- CONTENT -->
+        <main class="flex-1 p-8 pt-0 bg-white">
+            <!-- Page Title -->
+                
+            <div class="bg-gray-100 min-h-screen">
+                <div class="p-6 h-[calc(100vh-4rem)]">
+
+                    <!-- Page Title -->
+                    <h1 class="text-xl font-semibold mb-4">Messaging</h1>
+
+                    <!-- Chat Container -->
+                    <div class="bg-white rounded-xl shadow-sm border h-full flex overflow-hidden">
+
+                        <!-- LEFT: Conversations -->
+                        <div class="w-80 border-r flex flex-col">
+
+                            <!-- Conversations Header -->
+                            <div class="p-4 border-b">
+                                <h2 class="font-semibold text-sm mb-3">Conversations</h2>
+
+                                <input type="text"
+                                    placeholder="Search..."
+                                    class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            </div>
+
+                            <!-- Conversation List -->
+                            <div class="flex-1 overflow-y-auto">
+
+                                <!-- Active Item -->
+                                <div class="flex items-start gap-3 p-4 bg-blue-50 cursor-pointer">
+                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between">
+                                            <p class="font-medium text-sm">Luis Pittman</p>
+                                            <span class="text-xs text-gray-400">10:50 AM</span>
+                                        </div>
+                                        <p class="text-xs text-gray-500 truncate">
+                                            Hi, can I ask if there is anything...
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Item -->
+                                <div class="flex items-start gap-3 p-4 hover:bg-gray-50 cursor-pointer">
+                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between">
+                                            <p class="font-medium text-sm">Tom Anderson</p>
+                                            <span class="text-xs text-gray-400">12:24 AM</span>
+                                        </div>
+                                        <p class="text-xs text-gray-500 truncate">
+                                            Hello, I'm interested in this item...
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT: Chat Area -->
+                        <div class="flex-1 flex flex-col">
+
+                            <!-- Chat Header -->
+                            <div class="p-4 border-b flex items-center justify-between">
+
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                                    <div>
+                                        <p class="font-medium text-sm">Luis Pittman</p>
+                                        <span class="text-xs text-green-500">● Online</span>
+                                    </div>
+                                </div>
+
+                                <!-- Icons Placeholder -->
+                                <div class="flex gap-4 text-gray-400">
+                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
+                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
+                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
+                                </div>
+
+                            </div>
+
+                            <!-- Messages -->
+                            <div class="flex-1 p-6 overflow-y-auto space-y-4 bg-gray-50">
+
+                                <!-- Sent Message -->
+                                <div class="flex justify-end">
+                                    <div class="bg-[#0B1E8A] text-white px-4 py-2 rounded-lg text-sm max-w-xs">
+                                        Hi, I wonder when if there is going to be anything new for spring?
+                                    </div>
+                                </div>
+
+                                <!-- Received -->
+                                <div class="flex justify-start">
+                                    <div class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm max-w-xs">
+                                        Hi Luis, can you please be more specific?
+                                    </div>
+                                </div>
+
+                                <!-- Sent -->
+                                <div class="flex justify-end">
+                                    <div class="bg-[#0B1E8A] text-white px-4 py-2 rounded-lg text-sm max-w-xs">
+                                        Sure, I want to know when the new spring collection for men is coming
+                                    </div>
+                                </div>
+
+                                <!-- Received -->
+                                <div class="flex justify-start">
+                                    <div class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm max-w-xs">
+                                        Thank you for taking interest in our upcoming products...
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Message Input -->
+                            <div class="p-4 border-t flex items-center gap-3">
+
+                                <input type="text"
+                                    placeholder="Your message..."
+                                    class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+
+                                <button class="bg-[#0B1E8A] text-white px-5 py-2 rounded-lg text-sm hover:opacity-90">
+                                    Send
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+    
+ </html> 
+

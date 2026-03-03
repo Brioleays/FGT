@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+                
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script> 
+
+        <!-- Tailwind Config -->
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    primary: '',
+                    secondary: '',
+                    neutralBg: '',
+                    neutralText: '',
+                    accent: '#000080',
+                    
+                },
+                fontFamily: {
+                    customFont: ['open sans', 'sans-serif'],
+                    
+                },
+                borderRadius: {
+                    custom: '50px',
+                }
+                }
+            }
+            }
+        </script>
+
+        <title>FGT | NOTIFICATION</title>
+    </head>
+    <body class="font-customFont bg-gray-100">
+
+    <!-- HEADER -->
+    <div id="sidebarHead"></div>
+
+    <!-- PAGE LAYOUT -->
+    <div class="flex pt-16 min-h-screen">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar" class="md:w-64"></div>
+
+        <!-- CONTENT -->
+        <main class="flex-1 p-8 pt-0 bg-white">
+            <div class="bg-gray-100 min-h-screen">
+                <div class="p-8">
+
+                    <!-- Page Title -->
+                    <h1 class="text-2xl font-semibold text-accent mb-6">
+                    Notifications
+                    </h1>
+
+                    <!-- Tabs Section -->
+                    <div>
+
+                    <!-- Tab Buttons -->
+                    <div class="border-b border-gray-200">
+                        <ul class="flex gap-8 text-sm font-medium" role="tablist">
+
+                        <li>
+                            <button 
+                            class="tab-btn text-blue-700 border-b-2 border-blue-700 pb-3"
+                            data-tab="all">
+                            All Notifications
+                            </button>
+                        </li>
+
+                        <li>
+                            <button 
+                            class="tab-btn text-gray-500 hover:text-blue-700 pb-3"
+                            data-tab="read">
+                            Read Notifications
+                            </button>
+                        </li>
+
+                        <li>
+                            <button 
+                            class="tab-btn text-gray-500 hover:text-blue-700 pb-3"
+                            data-tab="unread">
+                            Unread Notifications
+                            </button>
+                        </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Tab Content Wrapper -->
+                    <div class="bg-white rounded-b-lg shadow-sm border border-t-0 p-6">
+
+                        <!-- SEARCH BAR -->
+                        <div class="mb-6">
+                        <input type="text"
+                                placeholder="Search..."
+                                class="w-full border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+
+                        <!-- ALL NOTIFICATIONS TAB -->
+                        <div id="all" class="tab-pane space-y-4">
+
+                        <!-- Notification Row -->
+                        <div class="flex items-center justify-between border rounded-lg p-4 hover:bg-gray-50">
+
+                            <div class="flex items-center gap-4">
+
+                            <input type="checkbox" class="w-4 h-4 accent-blue-600"/>
+                                <a href="./notificationview.html">
+                                    <div>
+                                <p class="font-medium text-sm">
+                                <span class="text-gray-800">New User Login</span> –
+                                <span class="text-gray-500">
+                                    Welcome! jondoe@gmail.com to your dashboard
+                                </span>
+                                
+                                </p>
+                            </div>
+                                </a>
+                            
+
+                            </div>
+
+                            <div class="flex items-center gap-6 text-sm text-gray-400">
+                            <span>May 5, 2020</span>
+                            <span class="cursor-pointer">•••</span>
+                            </div>
+
+                        </div>
+
+                        </div>
+
+                        <!-- READ TAB -->
+                        <div id="read" class="tab-pane hidden">
+                        <p class="text-sm text-gray-500">
+                            No read notifications available.
+                        </p>
+                        </div>
+
+                        <!-- UNREAD TAB -->
+                        <div id="unread" class="tab-pane hidden">
+                        <p class="text-sm text-gray-500">
+                            No unread notifications available.
+                        </p>
+                        </div>
+
+                        <!-- Pagination Footer -->
+                        <div class="flex items-center justify-between mt-10 text-sm text-gray-500">
+
+                        <div class="flex items-center gap-2">
+                            ←
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded">2</span>
+                            3 4 5 6 ...
+                            →
+                        </div>
+
+                        <div>
+                            154 Results
+                        </div>
+
+                        </div>
+
+                    </div>
+
+                    </div>
+                </div>
+                </div>
+                </div>
+        </div>
+
+        </main>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+    
+ </html> 
+
+ 

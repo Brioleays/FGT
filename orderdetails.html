@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+                
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script> 
+
+        <!-- Tailwind Config -->
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    primary: '',
+                    secondary: '',
+                    neutralBg: '',
+                    neutralText: '',
+                    accent: '#000080',
+                    
+                },
+                fontFamily: {
+                    customFont: ['open sans', 'sans-serif'],
+                    
+                },
+                borderRadius: {
+                    custom: '50px',
+                }
+                }
+            }
+            }
+        </script>
+
+        <title>FGT | ORDER DETAILS</title>
+    </head>
+    <body class="font-customFont bg-gray-100">
+
+    <!-- HEADER -->
+    <div id="sidebarHead"></div>
+
+    <!-- PAGE LAYOUT -->
+    <div class="flex pt-16 min-h-screen">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar" class="md:w-64"></div>
+
+        <!-- CONTENT -->
+        <main class="flex-1 p-8 pt-0 bg-white">
+            <!-- Page Title -->
+                
+                    <div class="pt-16 p-8 bg-gray-50 min-h-screen">
+
+                            <!-- Back Link -->
+                            <div class="mb-4 text-sm text-gray-500 cursor-pointer hover:text-blue-600">
+                                ← Back
+                            </div>
+
+                            <!-- Page Title -->
+                            <h1 class="text-2xl font-semibold mb-6">Details</h1>
+
+                            <!-- Card -->
+                            <div class="bg-white rounded-xl shadow-sm border p-6">
+
+                                <!-- Top Row -->
+                                <div class="flex items-center justify-between mb-4">
+
+                                    <div class="text-blue-600 font-semibold">
+                                        Order #1
+                                    </div>
+
+                                    <!-- Right Icons -->
+                                    <div class="flex items-center gap-8 text-gray-500 text-sm">
+
+                                        <div class="flex flex-col items-center cursor-pointer hover:text-blue-600">
+                                            <!-- ICON PLACEHOLDER -->
+                                            <div class="w-6 h-6 bg-gray-300 rounded mb-1"></div>
+                                            Document vault
+                                        </div>
+
+                                        <div class="flex flex-col items-center cursor-pointer hover:text-blue-600">
+                                            <!-- ICON PLACEHOLDER -->
+                                            <div class="w-6 h-6 bg-gray-300 rounded mb-1"></div>
+                                            Messages
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr class="mb-6">
+
+                                <!-- Content Section -->
+                                <div class="flex gap-8">
+
+                                    <!-- Property Image -->
+                                    <div class="w-80 h-60 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
+                                        Property Image Placeholder
+                                    </div>
+
+                                    <!-- Property Details -->
+                                    <div class="flex-1">
+
+                                        <h2 class="text-lg font-semibold text-blue-600 mb-2">
+                                            Property Name
+                                        </h2>
+
+                                        <div class="space-y-4 text-sm">
+
+                                            <div>
+                                                <p class="text-gray-400">File ID</p>
+                                                <p class="font-medium">ID 123</p>
+                                            </div>
+
+                                            <div>
+                                                <p class="text-gray-400">Key date</p>
+                                                <p class="font-medium">12/12/2025</p>
+                                            </div>
+
+                                            <div>
+                                                <p class="text-gray-400">Status Timeline</p>
+                                                <p class="font-medium text-green-600">Opened</p>
+                                            </div>
+
+                                            <div>
+                                                <p class="text-gray-400">Next steps</p>
+                                                <p class="font-medium">Title ordered</p>
+                                            </div>
+
+                                            <div>
+                                                <p class="text-gray-400">Assigned Parties</p>
+                                                <p class="font-medium">
+                                                    Jon Doe, Doe Jon, Jon Jon Doe
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+        </main>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+    
+ </html> 
+

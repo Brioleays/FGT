@@ -70,3 +70,27 @@ document.addEventListener("click", (e) => {
     }
   }
 });
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("tab-btn")) {
+
+    // Remove active state
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.classList.remove("text-blue-700", "border-b-2", "border-blue-700");
+      btn.classList.add("text-gray-500");
+    });
+
+    // Activate clicked
+    e.target.classList.remove("text-gray-500");
+    e.target.classList.add("text-blue-700", "border-b-2", "border-blue-700");
+
+    // Hide all panes
+    document.querySelectorAll(".tab-pane").forEach(pane => {
+      pane.classList.add("hidden");
+    });
+
+    // Show selected
+    const target = e.target.getAttribute("data-tab");
+    document.getElementById(target).classList.remove("hidden");
+  }
+});

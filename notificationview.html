@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+                
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script> 
+
+        <!-- Tailwind Config -->
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    primary: '',
+                    secondary: '',
+                    neutralBg: '',
+                    neutralText: '',
+                    accent: '#000080',
+                    
+                },
+                fontFamily: {
+                    customFont: ['open sans', 'sans-serif'],
+                    
+                },
+                borderRadius: {
+                    custom: '50px',
+                }
+                }
+            }
+            }
+        </script>
+
+        <title>FGT | OPEN NOTIFICATION</title>
+    </head>
+    <body class="font-customFont bg-gray-100">
+
+    <!-- HEADER -->
+    <div id="sidebarHead"></div>
+
+    <!-- PAGE LAYOUT -->
+    <div class="flex pt-16 min-h-screen">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar" class="md:w-64"></div>
+
+        <!-- CONTENT -->
+        <main class="flex-1 p-8 pt-0 bg-white">
+            <!-- Page Title -->
+            <div class="bg-gray-100 min-h-screen flex justify-center py-10 px-4">
+
+            <!-- Email Container -->
+            <div class="bg-white w-full max-w-3xl rounded-xl shadow-md border">
+
+                <!-- Header Section -->
+                <div class="border-b px-8 py-6">
+
+                <!-- Logo Placeholder -->
+                <div class="flex justify-center mb-6">
+                    <div class="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
+                    LOGO
+                    </div>
+                </div>
+
+                <!-- Subject -->
+                <h1 class="text-2xl font-semibold text-gray-800 text-center">
+                    Welcome to Your Dashboard
+                </h1>
+
+                <!-- Sender Info -->
+                <div class="flex items-center justify-between mt-6 text-sm text-gray-500">
+
+                    <div>
+                    <p class="font-medium text-gray-700">FreshGrow Support</p>
+                    <p>support@freshgrow.com</p>
+                    </div>
+
+                    <div class="text-right">
+                    <p>May 5, 2026</p>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <!-- Message Body -->
+                <div class="px-8 py-8 space-y-6 text-gray-700 text-sm leading-relaxed">
+
+                <p>Hello John,</p>
+
+                <p>
+                    We’re excited to let you know that your account has been successfully created.
+                    You now have full access to your dashboard and all available features.
+                </p>
+
+                <p>
+                    From your dashboard, you can manage subscriptions, track deliveries,
+                    and monitor your activity in real time.
+                </p>
+
+                <!-- CTA Button -->
+                <div class="text-center mt-8">
+                    <button class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg text-sm font-medium transition">
+                    Go to Dashboard
+                    </button>
+                </div>
+
+                <p class="mt-8">
+                    If you have any questions, feel free to reply to this email or contact our support team.
+                </p>
+
+                <p>
+                    Best regards,<br>
+                    The FreshGrow Team
+                </p>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="bg-gray-50 border-t px-8 py-6 text-xs text-gray-500 text-center rounded-b-xl">
+                © 2026 FreshGrow. All rights reserved.
+                </div>
+
+            </div>
+
+            </div>                
+        </main>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+    
+ </html> 
+
+
+
+
+
