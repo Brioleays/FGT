@@ -1,0 +1,35 @@
+/* 1. Ensure Navbar stays above Hero Overlay */
+#navbar { 
+    position: sticky !important; 
+    top: 0; 
+    z-index: 9999 !important; 
+}
+
+/* 2. Ensure Mobile Dropdown menu is above everything */
+#nav-links { 
+    z-index: 1000 !important; 
+    pointer-events: auto !important; /* Ensure dropdown is clickable */
+}
+
+/* 3. Dashboard Sidebar Stacking */
+#sidebar { 
+    z-index: 60 !important; 
+}
+
+/* 4. Ensure Hero Overlay doesn't block clicks */
+.absolute.inset-0.bg-black\/60 { 
+    z-index: 0 !important; 
+    pointer-events: none !important; /* Allows clicks to pass through overlay to text/buttons */
+}
+
+/* 5. Modals (Success/Delete) */
+.fixed.inset-0.z-\[200\] {
+    z-index: 200 !important;
+}
+
+/* 6. fix for shadows */
+section.shadow-lg, div.shadow-lg{
+    position:relative;
+    z-index:1;
+}
+
