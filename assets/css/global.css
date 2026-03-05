@@ -33,3 +33,17 @@ section.shadow-lg, div.shadow-lg{
     z-index:1;
 }
 
+section.rounded-b-custom{
+    position:relative;
+    z-index:1;
+}
+
+section.rounded-b-custom button{
+    position:relative;
+    z-index:20 !important;
+}
+.bg-black\/60 {
+    position:relative;
+    z-index:0 !important;
+    pointer-events:none!important;
+}
