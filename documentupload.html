@@ -38,19 +38,19 @@
 
         <title>FGT | DOCUMENTS UPLOAD</title>
     </head>
-    <body class="font-customFont bg-gray-100">
+    <body class="font-customFont bg-gray-100 h-screen overflow-hidden">
 
     <!-- HEADER -->
     <div id="sidebarHead"></div>
 
     <!-- PAGE LAYOUT -->
-    <div class="flex pt-16 min-h-screen">
+    <div class="flex  h-[calc(100vh-4rem)] relative">
 
         <!-- SIDEBAR -->
-        <div id="sidebar" class="md:w-64"></div>
+        <div id="sidebarContainer" ></div>
 
         <!-- CONTENT -->
-        <main class="flex-1 p-8 pt-0 bg-white">
+        <main class="flex-1 p-8 pt-0 bg-white transition-all duration-300 overflow-y-auto">
             <!-- Page Title -->
                 
             <div class="bg-gray-100 min-h-screen">
@@ -88,10 +88,8 @@
                         <!-- Upload Area -->
                         <div class="border-2 border-dashed border-gray-300 rounded-xl p-12 bg-white text-center hover:border-blue-600 transition">
 
-                            <!-- Upload Icon Placeholder -->
-                            <div class="w-14 h-14 mx-auto mb-4 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 text-xl">
-                                ↑
-                            </div>
+                            
+                            <img src="./assets/upload.png" class="w-14 h-14 mx-auto mb-4" alt="">
 
                             <p class="text-sm font-medium text-gray-700">
                                 Upload media (5MB Max)

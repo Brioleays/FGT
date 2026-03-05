@@ -38,28 +38,29 @@
 
         <title>FGT | ORDER DETAILS</title>
     </head>
-    <body class="font-customFont bg-gray-100">
+    <body class="font-customFont bg-gray-100 h-screen overflow-hidden">
 
     <!-- HEADER -->
     <div id="sidebarHead"></div>
 
     <!-- PAGE LAYOUT -->
-    <div class="flex pt-16 min-h-screen">
+    <div class="flex h-[calc(100vh-4rem)] relative">
 
         <!-- SIDEBAR -->
-        <div id="sidebar" class="md:w-64"></div>
+        <div id="sidebarContainer" ></div>
 
         <!-- CONTENT -->
-        <main class="flex-1 p-8 pt-0 bg-white">
+        <main class="flex-1 p-8 pt-0 overflow-y-auto bg-white transition-all duration-300">
             <!-- Page Title -->
                 
-                    <div class="pt-16 p-8 bg-gray-50 min-h-screen">
+                    <div class="pt-16 p-8 bg-gray-50 ">
 
                             <!-- Back Link -->
+                             <a href="./userdashboard.html">
                             <div class="mb-4 text-sm text-gray-500 cursor-pointer hover:text-blue-600">
                                 ← Back
                             </div>
-
+                            </a>
                             <!-- Page Title -->
                             <h1 class="text-2xl font-semibold mb-6">Details</h1>
 
@@ -76,15 +77,16 @@
                                     <!-- Right Icons -->
                                     <div class="flex items-center gap-8 text-gray-500 text-sm">
 
-                                        <div class="flex flex-col items-center cursor-pointer hover:text-blue-600">
+                                        <div id="documentTab" class="flex flex-col items-center cursor-pointer hover:text-blue-600">
                                             <!-- ICON PLACEHOLDER -->
-                                            <div class="w-6 h-6 bg-gray-300 rounded mb-1"></div>
+                                            
+                                            <img src="./assets/document.png" class="w-6 h-6  mb-1" alt="">
                                             Document vault
                                         </div>
 
-                                        <div class="flex flex-col items-center cursor-pointer hover:text-blue-600">
+                                        <div id="messageTab" class="flex flex-col items-center cursor-pointer hover:text-blue-600">
                                             <!-- ICON PLACEHOLDER -->
-                                            <div class="w-6 h-6 bg-gray-300 rounded mb-1"></div>
+                                            <img src="./assets/chat.png" class="w-6 h-6  mb-1" alt="">
                                             Messages
                                         </div>
 
@@ -98,10 +100,8 @@
                                 <div class="flex gap-8">
 
                                     <!-- Property Image -->
-                                    <div class="w-80 h-60 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
-                                        Property Image Placeholder
-                                    </div>
-
+                                    
+                                    <img src="./assets/Property.png" class="w-80 h-60 rounded-lg " alt="">
                                     <!-- Property Details -->
                                     <div class="flex-1">
 
@@ -143,7 +143,172 @@
                                     </div>
 
                                 </div>
+                                
 
+                        <!-- document TAB -->
+                        <div id="documentTab" class="tab-pane hidden">
+                        <p class="text-sm text-gray-500">
+                             <div class="flex items-center justify-between border rounded-lg p-4 hover:bg-gray-50">
+
+                            <div class="flex items-center gap-4">
+
+                            <input type="checkbox" class="w-4 h-4 accent-blue-600"/>
+                                <a href="./notificationview.html">
+                                    <div>
+                                <p class="font-medium text-sm">
+                                <span class="text-gray-800">New User Login</span> –
+                                <span class="text-gray-500">
+                                    Welcome! jondoe@gmail.com to your dashboard
+                                </span>
+                                
+                                </p>
+                            </div>
+                                </a>
+                            
+
+                            </div>
+
+                            <div class="flex items-center gap-6 text-sm text-gray-400">
+                            <span>May 5, 2020</span>
+                            <span class="cursor-pointer">•••</span>
+                            </div>
+
+                        </div>
+                        </p>
+                        </div>
+                         <!-- message TAB -->
+                        <div id="messageTab" class="tab-pane hidden">
+                        <p class="text-sm text-gray-500">
+                                  
+            <div class="bg-gray-100 min-h-screen">
+                <div class="p-6 h-[calc(100vh-4rem)]">
+
+                    <!-- Page Title -->
+                    <h1 class="text-xl font-semibold mb-4">Messaging</h1>
+
+                    <!-- Chat Container -->
+                    <div class="bg-white rounded-xl shadow-sm border h-full flex overflow-hidden">
+
+                        <!-- LEFT: Conversations -->
+                        <div class="w-80 border-r flex flex-col">
+
+                            <!-- Conversations Header -->
+                            <div class="p-4 border-b">
+                                <h2 class="font-semibold text-sm mb-3">Conversations</h2>
+
+                                <input type="text"
+                                    placeholder="Search..."
+                                    class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            </div>
+
+                            <!-- Conversation List -->
+                            <div class="flex-1 overflow-y-auto">
+
+                                <!-- Active Item -->
+                                <div class="flex items-start gap-3 p-4 bg-blue-50 cursor-pointer">
+                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between">
+                                            <p class="font-medium text-sm">Luis Pittman</p>
+                                            <span class="text-xs text-gray-400">10:50 AM</span>
+                                        </div>
+                                        <p class="text-xs text-gray-500 truncate">
+                                            Hi, can I ask if there is anything...
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Item -->
+                                <div class="flex items-start gap-3 p-4 hover:bg-gray-50 cursor-pointer">
+                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between">
+                                            <p class="font-medium text-sm">Tom Anderson</p>
+                                            <span class="text-xs text-gray-400">12:24 AM</span>
+                                        </div>
+                                        <p class="text-xs text-gray-500 truncate">
+                                            Hello, I'm interested in this item...
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT: Chat Area -->
+                        <div class="flex-1 flex flex-col">
+
+                            <!-- Chat Header -->
+                            <div class="p-4 border-b flex items-center justify-between">
+
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                                    <div>
+                                        <p class="font-medium text-sm">Luis Pittman</p>
+                                        <span class="text-xs text-green-500">● Online</span>
+                                    </div>
+                                </div>
+
+                                <!-- Icons Placeholder -->
+                                <div class="flex gap-4 text-gray-400">
+                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
+                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
+                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
+                                </div>
+
+                            </div>
+
+                            <!-- Messages -->
+                            <div class="flex-1 p-6 overflow-y-auto space-y-4 bg-gray-50">
+
+                                <!-- Sent Message -->
+                                <div class="flex justify-end">
+                                    <div class="bg-[#0B1E8A] text-white px-4 py-2 rounded-lg text-sm max-w-xs">
+                                        Hi, I wonder when if there is going to be anything new for spring?
+                                    </div>
+                                </div>
+
+                                <!-- Received -->
+                                <div class="flex justify-start">
+                                    <div class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm max-w-xs">
+                                        Hi Luis, can you please be more specific?
+                                    </div>
+                                </div>
+
+                                <!-- Sent -->
+                                <div class="flex justify-end">
+                                    <div class="bg-[#0B1E8A] text-white px-4 py-2 rounded-lg text-sm max-w-xs">
+                                        Sure, I want to know when the new spring collection for men is coming
+                                    </div>
+                                </div>
+
+                                <!-- Received -->
+                                <div class="flex justify-start">
+                                    <div class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm max-w-xs">
+                                        Thank you for taking interest in our upcoming products...
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Message Input -->
+                            <div class="p-4 border-t flex items-center gap-3">
+
+                                <input type="text"
+                                    placeholder="Your message..."
+                                    class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+
+                                <button class="bg-[#0B1E8A] text-white px-5 py-2 rounded-lg text-sm hover:opacity-90">
+                                    Send
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                        </p>
                             </div>
 
                         </div>

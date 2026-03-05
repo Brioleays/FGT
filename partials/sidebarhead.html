@@ -1,52 +1,40 @@
-<!-- ================= HEADER (FULL WIDTH) ================= -->
+<!-- HEADER -->
+<header class="h-16 bg-white border-b flex items-center justify-between px-6">
 
+  <div class="flex items-center gap-4 flex-1">
+    <button id="openSidebar" class="md:hidden text-2xl">
+      ☰
+    </button>
 
-  <header class="fixed top-0 left-0 w-full h-16 bg-white border-b flex items-center justify-between px-6 z-50">
+    <img src="./assets/logo.png"
+         class="h-10 object-contain"
+         alt="Logo" />
 
-    <!-- LEFT: Logo + Search -->
-    <div class="flex items-center gap-6 w-1/2">
+    <div class="relative w-full max-w-md hidden sm:block">
+      <input type="text"
+             placeholder="Search..."
+             class="w-full pl-10 pr-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
 
-        <!-- LOGO PLACEHOLDER -->
-        
-        <img class=" h-12 bg-gray-900 rounded" src="./assets/logo.png"/>
+      <img src="./assets/search.png"
+           class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"/>
+    </div>
+  </div>
 
-        <!-- SEARCH -->
-        <div class="relative w-full max-w-md">
-            <input type="text"
-                   placeholder="Search..."
-                   class="w-full pl-10 pr-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+  <div class="flex items-center gap-6">
+    <img src="./assets/chat.png" class="w-5 h-5 opacity-70">
 
-            <img src="./assets/search.png" class="absolute left-3 top-2 text-gray-400 text-sm"/>
-                
-            
-        </div>
+    <div class="relative">
+      <img src="./assets/notification.png" class="w-5 h-5 opacity-70">
+      <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
+        3
+      </span>
     </div>
 
-    <!-- RIGHT: Icons + User -->
-    <div class="flex items-center gap-6">
-         <!-- Mobile Toggle -->
-      <button id="openSidebar" class="md:hidden text-2xl">
-        ☰
-      </button>
-        <!-- Messages -->
-        <img src="./assets/chat.png" class="text-gray-400 text-sm"/>
-        <!-- Notification -->
-        <div class="relative cursor-pointer">
-            <img src="./assets/notification.png" class="text-gray-400 text-sm"/>
-            <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
-                3
-            </span>
-        </div>
-
-        <!-- USER -->
-        <div class="flex items-center gap-2 cursor-pointer">
-            <!-- User -->
-            <img src="./assets/user.png"
-           class="w-10 h-10 rounded-full object-cover"
-           alt="User">
-            <span class="text-sm font-medium">Ben Doe</span>
-        </div>
-
+    <div class="flex items-center gap-2">
+      <img src="./assets/user.png"
+           class="w-9 h-9 rounded-full object-cover">
+      <span class="text-sm font-medium hidden sm:block">Ben Doe</span>
     </div>
+  </div>
 
 </header>

@@ -38,24 +38,25 @@
 
         <title>FGT | USER ORDER</title>
     </head>
-    <body class="font-customFont bg-gray-100">
+    <body class="font-customFont bg-gray-100 h-screen overflow-hidden">
 
     <!-- HEADER -->
     <div id="sidebarHead"></div>
 
     <!-- PAGE LAYOUT -->
 
-    <div class="flex pt-i6 min-h-screen">
+    <div class="flex h-[calc(100vh-4rem)] relative">
 
         <!-- SIDEBAR -->
-        <div id="sidebar" class="md:w-64"></div>
+        <div id="sidebarContainer" ></div>
 
         <!-- CONTENT -->
 
-        <main class="flex-1 pt-16 bg-white">
+        <main class="flex-1 p-8 pt-0 overflow-y-auto bg-white transition-all duration-300">
             <!-- Page Title -->
             <div class="p-8">
                     <h1 class=" text-2xl font-semibold text-accent">Orders</h1>
+            </div>
             <!-- Page specific content goes here -->
             <div class=" bg-gray-50 min-h-screen">
 

@@ -38,22 +38,23 @@
 
         <title>FGT | DOCUMENTS</title>
     </head>
-    <body class="font-customFont bg-gray-100">
+    <body class="font-customFont bg-gray-100 h-screen overflow-hidden">
 
     <!-- HEADER -->
     <div id="sidebarHead"></div>
 
     <!-- PAGE LAYOUT -->
-    <div class="flex pt-16 min-h-screen">
+    <div class="flex h-[calc(100vh-4rem)] relative">
 
         <!-- SIDEBAR -->
-        <div id="sidebar" class="md:w-64"></div>
+        <div id="sidebarContainer" ></div>
 
         <!-- CONTENT -->
-        <main class="flex-1 p-8 pt-0 bg-white">
+        <main class="flex-1 p-8 pt-0 overflow-y-auto bg-white transition-all duration-300">
+            
             <!-- Page Title -->
                 
-            <div class="bg-gray-100 min-h-screen">
+            <div class="bg-gray-100">
 
                     <div class="p-8">
 
@@ -84,9 +85,8 @@
                                     class="absolute top-4 left-4 w-4 h-4 accent-blue-600">
 
                                 <!-- Image Placeholder -->
-                                <div class="w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
-                                    Property Image
-                                </div>
+                                
+                                <img  src="./assets/documentimg.png" class="w-full h-40 bg-gray-200 rounded-lg mb-4"/>
 
                                 <!-- Date -->
                                 <p class="text-xs text-gray-400 mb-1">
@@ -123,9 +123,7 @@
                                 <input type="checkbox"
                                     class="absolute top-4 left-4 w-4 h-4 accent-blue-600">
 
-                                <div class="w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
-                                    Property Image
-                                </div>
+                                <img  src="./assets/documentimg.png" class="w-full h-40 bg-gray-200 rounded-lg mb-4"/>
 
                                 <p class="text-xs text-gray-400 mb-1">
                                     2022.12.1
@@ -154,9 +152,7 @@
                                 <input type="checkbox"
                                     class="absolute top-4 left-4 w-4 h-4 accent-blue-600">
 
-                                <div class="w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
-                                    Property Image
-                                </div>
+                                <img  src="./assets/documentimg.png" class="w-full h-40 bg-gray-200 rounded-lg mb-4"/>
 
                                 <p class="text-xs text-gray-400 mb-1">
                                     2022.12.1

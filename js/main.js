@@ -10,7 +10,7 @@ function loadAllComponents() {
     navbar: "./partials/navbar.html",
     footer: "./partials/footer.html",
     footerTwo: "./partials/footertwo.html",
-    sidebar: "./partials/sidebar.html",
+    sidebarContainer: "./partials/sidebar.html",
     sidebarHead: "./partials/sidebarhead.html"
   };
 
@@ -94,3 +94,24 @@ document.addEventListener("click", function (e) {
     document.getElementById(target).classList.remove("hidden");
   }
 });
+document.addEventListener("DOMContentLoaded", function(){
+const sidebar = document.getElementById("sidebar");
+  const openBtn = document.getElementById("openSidebar");
+  if( openBtn && sidebar) {
+  openBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-x-full");
+  });
+}
+  });
+
+  // Auto close on mobile click outside
+  document.addEventListener("click", function (e) {
+    if (
+      window.innerWidth < 768 &&
+      !sidebar.contains(e.target) &&
+      !openBtn.contains(e.target)
+    ) {
+      sidebar.classList.add("-translate-x-full");
+    }
+  });
+    
