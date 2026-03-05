@@ -47,3 +47,52 @@ section.rounded-b-custom button{
     z-index:0 !important;
     pointer-events:none!important;
 }
+#sidebar {
+    height: calc(100dvh - 4rem) !important; /* 'dvh' is Dynamic Viewport Height for mobile */
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Ensure the footer doesn't get squashed */
+#sidebar .mt-auto {
+    flex-shrink: 0 !important;
+}
+[span_3](start_span)/* Prevent main content from squashing the sidebar[span_3](end_span) */
+main {
+    min-width: 0; 
+}
+
+[span_4](start_span)[span_5](start_span)/* Ensure images maintain aspect ratio[span_4](end_span)[span_5](end_span) */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+[span_6](start_span)/* Force horizontal scroll for all tables on small screens[span_6](end_span) */
+.overflow-x-auto {
+    -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+}
+
+#chat-window {
+    min-width: 0;
+    flex: 1 1 0%;
+}
+
+/* Fix mobile height issues so the input bar isn't cut off */
+@media (max-width: 1024px) {
+    #chat-list.hidden {
+        display: none !important;
+    }
+    /* Ensure chat occupies the correct height below your header */
+    .chat-container-height {
+        height: calc(100dvh - 8rem); 
+    }
+}
+
+/* Ensure message bubbles wrap text correctly and don't push the screen wide */
+.max-w-xs {
+    max-width: 75% !important;
+    word-wrap: break-word;
+}
+

@@ -53,138 +53,47 @@
         <!-- CONTENT -->
         <main class="flex-1 p-8 pt-0 overflow-y-auto bg-white transition-all duration-300">
             <!-- Page Title -->
-                
-            <div class="bg-gray-100 ">
-                <div class="p-6 ">
+            <div class="bg-white rounded-xl shadow-sm border h-full flex overflow-hidden relative">
 
-                    <!-- Page Title -->
-                    <h1 class="text-xl font-semibold mb-4">Messaging</h1>
+    <div id="chat-list" class="w-full lg:w-80 border-r flex flex-col bg-white absolute lg:relative z-20 h-full transition-transform duration-300">
+        <div class="p-4 border-b">
+            <h2 class="font-semibold text-sm mb-3">Conversations</h2>
+            <input type="text" placeholder="Search..." class="w-full border rounded-lg px-3 py-2 text-sm">
+        </div>
 
-                    <!-- Chat Container -->
-                    <div class="bg-white rounded-xl shadow-sm border h-full flex overflow-hidden">
-
-                        <!-- LEFT: Conversations -->
-                        <div class="w-80 border-r flex flex-col">
-
-                            <!-- Conversations Header -->
-                            <div class="p-4 border-b">
-                                <h2 class="font-semibold text-sm mb-3">Conversations</h2>
-
-                                <input type="text"
-                                    placeholder="Search..."
-                                    class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
-                            </div>
-
-                            <!-- Conversation List -->
-                            <div class="flex-1 overflow-y-auto">
-
-                                <!-- Active Item -->
-                                <div class="flex items-start gap-3 p-4 bg-blue-50 cursor-pointer">
-                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
-                                    <div class="flex-1">
-                                        <div class="flex justify-between">
-                                            <p class="font-medium text-sm">Luis Pittman</p>
-                                            <span class="text-xs text-gray-400">10:50 AM</span>
-                                        </div>
-                                        <p class="text-xs text-gray-500 truncate">
-                                            Hi, can I ask if there is anything...
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Item -->
-                                <div class="flex items-start gap-3 p-4 hover:bg-gray-50 cursor-pointer">
-                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
-                                    <div class="flex-1">
-                                        <div class="flex justify-between">
-                                            <p class="font-medium text-sm">Tom Anderson</p>
-                                            <span class="text-xs text-gray-400">12:24 AM</span>
-                                        </div>
-                                        <p class="text-xs text-gray-500 truncate">
-                                            Hello, I'm interested in this item...
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- RIGHT: Chat Area -->
-                        <div class="flex-1 flex flex-col">
-
-                            <!-- Chat Header -->
-                            <div class="p-4 border-b flex items-center justify-between">
-
-                                <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
-                                    <div>
-                                        <p class="font-medium text-sm">Luis Pittman</p>
-                                        <span class="text-xs text-green-500">● Online</span>
-                                    </div>
-                                </div>
-
-                                <!-- Icons Placeholder -->
-                                <div class="flex gap-4 text-gray-400">
-                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
-                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
-                                    <div class="w-5 h-5 bg-gray-300 rounded"></div>
-                                </div>
-
-                            </div>
-
-                            <!-- Messages -->
-                            <div class="flex-1 p-6 overflow-y-auto space-y-4 bg-gray-50">
-
-                                <!-- Sent Message -->
-                                <div class="flex justify-end">
-                                    <div class="bg-[#0B1E8A] text-white px-4 py-2 rounded-lg text-sm max-w-xs">
-                                        Hi, I wonder when if there is going to be anything new for spring?
-                                    </div>
-                                </div>
-
-                                <!-- Received -->
-                                <div class="flex justify-start">
-                                    <div class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm max-w-xs">
-                                        Hi Luis, can you please be more specific?
-                                    </div>
-                                </div>
-
-                                <!-- Sent -->
-                                <div class="flex justify-end">
-                                    <div class="bg-[#0B1E8A] text-white px-4 py-2 rounded-lg text-sm max-w-xs">
-                                        Sure, I want to know when the new spring collection for men is coming
-                                    </div>
-                                </div>
-
-                                <!-- Received -->
-                                <div class="flex justify-start">
-                                    <div class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm max-w-xs">
-                                        Thank you for taking interest in our upcoming products...
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- Message Input -->
-                            <div class="p-4 border-t flex items-center gap-3">
-
-                                <input type="text"
-                                    placeholder="Your message..."
-                                    class="flex-1 border rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
-
-                                <button class="bg-[#0B1E8A] text-white px-5 py-2 rounded-lg text-sm hover:opacity-90">
-                                    Send
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+        <div class="flex-1 overflow-y-auto">
+            <div class="conversation-item flex items-start gap-3 p-4 hover:bg-gray-50 cursor-pointer border-b">
+                <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                <div class="flex-1">
+                    <p class="font-medium text-sm">Luis Pittman</p>
+                    <p class="text-xs text-gray-500 truncate">Hi, can I ask if there is anything...</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="chat-window" class="flex-1 flex flex-col w-full min-w-0">
+        <div class="p-4 border-b flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button id="back-to-list" class="lg:hidden p-2 -ml-2 text-gray-600">←</button>
+                <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                <div>
+                    <p class="font-medium text-sm">Luis Pittman</p>
+                    <span class="text-xs text-green-500">● Online</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 p-4 overflow-y-auto space-y-4 bg-gray-50" id="message-container">
+             </div>
+
+        <div class="p-4 border-t flex items-center gap-3 bg-white">
+            <input type="text" placeholder="Your message..." class="flex-1 border rounded-full px-4 py-2 text-sm">
+            <button class="bg-[#0B1E8A] text-white px-5 py-2 rounded-lg text-sm">Send</button>
+        </div>
+    </div>
+</div>
+            
         </main>
 
     </div>

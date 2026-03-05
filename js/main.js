@@ -185,3 +185,20 @@ function handleUniversalTabs(btn, id) {
     btn.classList.remove("text-gray-500");
 }
 
+// ✅ MOBILE CHAT TOGGLE LOGIC
+document.addEventListener("click", (e) => {
+    const chatList = document.getElementById("chat-list");
+    const chatWindow = document.getElementById("chat-window");
+
+    // 1. When a user clicks a conversation item on mobile
+    if (e.target.closest(".conversation-item") && window.innerWidth < 1024) {
+        chatList.classList.add("hidden"); // Hide the list
+        chatWindow.classList.remove("hidden"); // Show the chat
+    }
+
+    // 2. When the user clicks the 'Back' button in the chat header
+    if (e.target.closest("#back-to-list")) {
+        chatList.classList.remove("hidden"); // Show the list again
+        chatWindow.classList.add("hidden"); // Hide the chat
+    }
+});

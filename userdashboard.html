@@ -72,7 +72,7 @@
 
                     <input type="text"
                         placeholder="Search by Property Address, File No..."
-                        class="flex-1 border w-64 rounded-lg px-4 py-2 text-sm"/>
+                        class="invisible flex-1 border w-20 md:visible  md:w-64 rounded-lg px-4 py-2 text-sm"/>
                     </div>
                     <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">
                         + Add Order
@@ -80,11 +80,11 @@
                 </div>
 
                 <!-- Table -->
-                <div class="bg-white rounded-lg shadow-sm border overflow-hidden">
+                <div class="bg-white rounded-lg shadow-sm border overflow-x-auto">
 
-                    <table class="w-full text-sm text-left">
+                        <table class="w-full text-sm text-left min-w-[800px]">
 
-                        <thead class="bg-gray-50 border-b text-gray-500">
+                                <thead class="bg-gray-50 border-b text-gray-500">
                             <tr>
 
                                 <th class="px-6 py-3"><input type="checkbox" class="w-4 h-4 accent-blue-600"/></th>
