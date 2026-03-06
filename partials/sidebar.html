@@ -1,47 +1,33 @@
-<!-- ================= SIDEBAR ================= -->
 <aside id="sidebar"
-  class="w-64 bg-gray-100 border-r p-6 flex flex-col fixed md:relative top-16 md:top-0 left-0 h-[calc(100vh-4rem)] md:h-screen transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-50">
+  class="fixed top-16 md:top-0 left-0 z-50 w-64 h-[calc(100dvh-4rem)] md:h-screen bg-gray-100 border-r p-6 flex flex-col transition-transform duration-300 ease-in-out -translate-x-full md:translate-x-0 md:relative">
 
-
-    <nav class="space-y-2 flex-1 overflow-y-auto">
-
-    <a href="../userdashboard.html"
-       class="flex items-center gap-3 px-4 py-2 border-l-4 border-blue-600 bg-blue-50 text-blue-600 rounded-lg font-medium">
+  <nav class="space-y-2 flex-1 overflow-y-auto">
+    <a href="../userdashboard.html" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">
         <img src="./assets/order.png" class="w-5 h-5" alt="">
         Orders
     </a>
-
-    <a href="../document.html"
-       class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+    <a href="../document.html" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">
         <img src="./assets/document.png" class="w-5 h-5" alt="">
         Documents
     </a>
-
-    <a href="../messaging.html"
-       class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+    <a href="../messaging.html" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">
         <img src="./assets/chat.png" class="w-5 h-5" alt="">
         Messages
     </a>
-
-    <a href="../notification.html"
-       class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+    <a href="../notification.html" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">
         <img src="./assets/notification.png" class="w-5 h-5" alt="">
         Notification
     </a>
-
-    <a href="../profile.html"
-       class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+    <a href="../profile.html" class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">
         <img src="./assets/user.png" class="w-5 h-5" alt="">
         Profile
     </a>
-
   </nav>
 
-    <div class="mt-auto pt-6 border-t flex gap-4 bg-gray-100">
+  <div class="mt-auto pt-6 border-t flex gap-4 bg-gray-100 shrink-0">
     <a href="../index.html">
-    <img src="./assets/exit.png" class="w-5 h-5 opacity-70 cursor-pointer" alt="">
+        <img src="./assets/exit.png" class="w-5 h-5 opacity-70 cursor-pointer hover:opacity-100 transition-opacity" alt="Exit">
     </a>
-    <img src="./assets/settings.png" class="w-5 h-5 opacity-70 cursor-pointer" alt="">
+    <img src="./assets/settings.png" class="w-5 h-5 opacity-70 cursor-pointer hover:opacity-100 transition-opacity" alt="Settings">
   </div>
-
 </aside>
