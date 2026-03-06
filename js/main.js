@@ -59,61 +59,6 @@
    return str.charAt(0).toUpperCase() + str.slice(1);
  }
 
-// // ✅ Dynamic Hamburger Menu Logic (works for all loaded navbars)
-// document.addEventListener("click", (e) => {
-//   // Check if the click is on a hamburger button
-//   if (e.target.closest("#menu-toggle")) {
-//     const navLinks = document.querySelector("#nav-links");
-//     if (navLinks) {
-//       navLinks.classList.toggle("hidden");
-//     }
-//   }
-// });
-
-// document.addEventListener("click", function (e) {
-//   if (e.target.classList.contains("tab-btn")) {
-
-//     // Remove active state
-//     document.querySelectorAll(".tab-btn").forEach(btn => {
-//       btn.classList.remove("text-blue-700", "border-b-2", "border-blue-700");
-//       btn.classList.add("text-gray-500");
-//     });
-
-//     // Activate clicked
-//     e.target.classList.remove("text-gray-500");
-//     e.target.classList.add("text-blue-700", "border-b-2", "border-blue-700");
-
-//     // Hide all panes
-//     document.querySelectorAll(".tab-pane").forEach(pane => {
-//       pane.classList.add("hidden");
-//     });
-
-//     // Show selected
-//     const target = e.target.getAttribute("data-tab");
-//     document.getElementById(target).classList.remove("hidden");
-//   }
-// });
-// document.addEventListener("DOMContentLoaded", function(){
-// const sidebar = document.getElementById("sidebar");
-//   const openBtn = document.getElementById("openSidebar");
-//   if( openBtn && sidebar) {
-//   openBtn.addEventListener("click", function (){
-//     sidebar.classList.toggle("-translate-x-full");
-//   });
-// }
-//   });
-
-//   // Auto close on mobile click outside
-//   document.addEventListener("click", function (e) {
-//     if (
-//       window.innerWidth < 768 &&
-//       !sidebar.contains(e.target) &&
-//       !openBtn.contains(e.target)
-//     ) {
-//       sidebar.classList.add("-translate-x-full");
-//     }
-//   });
-
 
 /**
  * FGT Universal Logic - Proven for Landing & Dashboard
@@ -202,41 +147,4 @@ document.addEventListener("click", (e) => {
         chatWindow.classList.add("hidden"); // Hide the chat
     }
 });
-
-// ✅ MODAL UTILITIES
-function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.classList.remove("hidden");
-        // Prevent body scrolling when modal is open
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.classList.add("hidden");
-        // Restore body scrolling
-        document.body.style.overflow = 'auto';
-    }
-}
-
-// Optional: Close modal if user clicks the dark background
-document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("bg-black/50")) {
-        closeModal(e.target.id);
-    }
-});
-
-
-document.addEventListener("submit", (e) => {
-    const form = e.target.closest("form");
-    if (form) {
-        e.preventDefault();
-        // Your saving logic here...
-        openModal('success-modal');
-    }
-});
-
 
