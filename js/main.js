@@ -202,3 +202,41 @@ document.addEventListener("click", (e) => {
         chatWindow.classList.add("hidden"); // Hide the chat
     }
 });
+
+// ✅ MODAL UTILITIES
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove("hidden");
+        // Prevent body scrolling when modal is open
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add("hidden");
+        // Restore body scrolling
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Optional: Close modal if user clicks the dark background
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("bg-black/50")) {
+        closeModal(e.target.id);
+    }
+});
+
+
+document.addEventListener("submit", (e) => {
+    const form = e.target.closest("form");
+    if (form) {
+        e.preventDefault();
+        // Your saving logic here...
+        openModal('success-modal');
+    }
+});
+
+
