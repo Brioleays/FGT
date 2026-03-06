@@ -1,7 +1,7 @@
  document.addEventListener("DOMContentLoaded", () => {
    loadAllComponents();
  //   initSidebar();
- //   highlightActiveLink();
+    highlightActiveLink();
  //   initAlert();
  });
 
@@ -148,3 +148,58 @@ document.addEventListener("click", (e) => {
     }
 });
 
+// --- MISSING SNIPPET 1: SIDEBAR ACTIVE STATE ---
+function highlightActiveLink() {
+    // Small delay ensures the sidebar HTML has finished fetching before checking links
+    setTimeout(() => {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('#sidebar nav a');
+
+        navLinks.forEach(link => {
+            // Reset to default
+            link.classList.remove('border-l-4', 'border-blue-600', 'bg-blue-50', 'text-blue-600', 'font-medium');
+            link.classList.add('text-gray-600');
+
+            // Apply active styles if URLs match
+            if (link.getAttribute('href') && currentPath.includes(link.getAttribute('href').split('/').pop())) {
+                link.classList.add('border-l-4', 'border-blue-600', 'bg-blue-50', 'text-blue-600', 'font-medium');
+                link.classList.remove('text-gray-600');
+            }
+        });
+    }, 100); 
+}
+
+// --- MISSING SNIPPET 2: MODALS & FORM AUTOMATION ---
+
+// Modal Utilities
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove("hidden");
+        document.body.style.overflow = 'hidden'; // Stops background scrolling
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add("hidden");
+        document.body.style.overflow = 'auto'; // Restores scrolling
+    }
+}
+
+// Global click listener for Modals (Close on background click)
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("bg-black/50")) {
+        closeModal(e.target.id);
+    }
+});
+
+// Auto-trigger Success Modal on any form submission
+document.addEventListener("submit", (e) => {
+    const form = e.target.closest("form");
+    if (form) {
+        e.preventDefault(); // Stops the page from refreshing
+        openModal('success-modal'); // Triggers the green success popup
+    }
+});
